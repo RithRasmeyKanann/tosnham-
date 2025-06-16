@@ -1,0 +1,256 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F59E0B;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #D97706;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dish Card Hover Effects */
+.dish-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Drawer Animation */
+.cart-drawer-open {
+    transform: translateX(0) !important;
+}
+
+/* Glassmorphism Search Bar */
+.search-bar {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Mobile Menu Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu-open {
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Navigation Active States */
+nav a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #F59E0B;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.text-primary::after {
+    width: 100%;
+}
+
+/* Menu Section Transitions */
+.menu-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.menu-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* View Menu Button Animation */
+.view-menu-btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view-menu-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
+
+.view-menu-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    h3 {
+        font-size: 1.125rem;
+    }
+}
+
+/* Custom Focus Styles */
+.focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+/* Button Hover Effects */
+.btn-hover {
+    @apply transition-all duration-200 hover:shadow-md active:scale-95;
+}
+
+/* Image Loading Placeholder */
+.image-placeholder {
+    @apply bg-gray-200 animate-pulse;
+}
+
+/* Custom Selection Color */
+::selection {
+    background: #F59E0B;
+    color: white;
+}
+
+/* Dish Image Hover Zoom */
+.dish-image {
+    transition: transform 0.5s ease;
+}
+
+.dish-image:hover {
+    transform: scale(1.1);
+}
+
+/* Rating Stars Animation */
+.rating-star {
+    transition: transform 0.2s ease;
+}
+
+.rating-star:hover {
+    transform: scale(1.2);
+}
+
+/* Cart Item Animation */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.cart-item-enter {
+    animation: slideInRight 0.3s ease-out forwards;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 30;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dish Category Badge */
+.category-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #4B5563;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Price Tag Animation */
+.price-tag {
+    transition: color 0.3s ease;
+}
+
+.dish-card:hover .price-tag {
+    color: #F59E0B;
+}
+
+/* Add to Cart Button Animation */
+.add-to-cart-btn {
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    transform: translateY(-1px);
+}
+
+.add-to-cart-btn:active {
+    transform: translateY(0);
+}
+
+/* Cart Badge Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.cart-badge {
+    animation: bounce 0.5s ease infinite;
+} 
