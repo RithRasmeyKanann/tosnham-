@@ -1,4 +1,4 @@
-# Platera - Modern Restaurant Website
+# Tos Nham- Modern Restaurant Website
 
 A sleek, modern restaurant website built with HTML, Tailwind CSS, and vanilla JavaScript. Features a unique asymmetric layout with a floating cart drawer and horizontal dish scroll.
 
